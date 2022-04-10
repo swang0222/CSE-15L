@@ -27,3 +27,72 @@
 ---
 
 ## Trying some commands
+
+- After established remote connection, try the following commands:
+- 1. cd
+- 2. ls -lat
+- 3. ls -a
+- 4. cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/
+- Then, also try it on local computer after logging out the remote connection
+
+![ls -a](ls-a.png)
+
+---
+
+## Moving Files with -scp command
+
+- Create a java file named WhereAmI.java on your local folder and copy and paster the following contents in:
+
+```
+class WhereAmI {
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("os.name"));
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(System.getProperty("user.home"));
+        System.out.println(System.getProperty("user.dir"));
+    }
+}
+```
+
+- Use the command scp WhereAmI.java cs15lsp22zz&#8203;@ieng6.ucsd.edu:~/ (With _zz_ replaced with the letters of your username)
+
+- When prompted to login, enter the password again
+- Now it should be sent to the ieng6 computer. Login using ssh and use ls command to check.
+
+![scp](scp.png)
+
+---
+
+## Setting an SSH key
+
+### ssh-keygen allows you to create a pair of public key and private key in place of your password, so you do not need to type in password everytime when you try to establish a remote connection
+
+- In terminal, type _ssh-keygen_
+- - If using windows system, then type _ssh-keygen -t ed25519_
+- Press enter twice (to make sure no passphrase is added)
+- Copy the public key to the remote computer
+- 1. log in using ssh
+- 2. type _.mkdir ssh_
+- 3. log out
+- 4. type scp /Users/**user-name**/.ssh/**id_rsa.pub** cs15lsp22**zz**@ieng6.ucsd.edu:~/.ssh/authorized_keys
+- - - Replace the bolded part with your own username and path
+
+![ssh key](ssh-key.png)
+
+---
+
+## Optimize Remote Running
+
+- you can write a command inside quotes at the end of an ssh command
+- 1. it will directly run the command on the remote computer and then exit
+- 2. format: ssh cs15lsp22zz&#8203;@ieng6.ucsd.edu "ls"
+- you can use semicolons to process multiple tasks with one line
+- 1. format: cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
+- you can also use up-arrow to recall the last command
+
+### Example
+
+I can edit the file locally and upload it to the remote computer with one single line:  
+\- scp WhereAmI.java cs15lsp22alo&#8203;@ieng6.ucsd.edu:~/; ssh cs15lsp22alo&#8203;@ieng6.ucsd.edu "ls"  
+And it will give me the following output:
+![optimize](optimize.png)
