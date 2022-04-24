@@ -8,7 +8,7 @@
 - Click the download button
 - Follow the instructions.
 
-![vscode main menu](vscode.png)  
+![vscode main menu](screenshots-lab1/vscode.png)  
 A screenshot of visual studio code (vscode) starting page
 
 ---
@@ -22,7 +22,7 @@ A screenshot of visual studio code (vscode) starting page
 - 2. Type the command: ```ssh cs15lsp22zz@ieng6.ucsd.edu``` with _zz_ replaced by the letters your course-specific account; if a text prompts out, saying "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Then type yes.
 - 3. Type in your password
 
-![Connected Successfully](remote_connect.png)
+![Connected Successfully](screenshots-lab1/remote_connect.png)
 The terminal prompt when succesfully logged into remote server.
 
 ---
@@ -36,7 +36,7 @@ The terminal prompt when succesfully logged into remote server.
 - 4. ```cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/```
 - Then, also try it on local computer after logging out the remote connection
 
-![ls -a](ls-a.png)
+![ls -a](screenshots-lab1/ls-a.png)
 The ls -a command will list all the files (including the hidden files).
 
 ---
@@ -60,7 +60,7 @@ class WhereAmI {
 - When prompted to login, enter the password again
 - Now it should be sent to the ieng6 computer. Login using ssh and use ls command to check.
 
-![scp](scp.png)
+![scp](screenshots-lab1/scp.png)
 After typing scp and ssh commands, what the terminal looks like.
 
 ---
@@ -78,7 +78,7 @@ After typing scp and ssh commands, what the terminal looks like.
 - 3. log out
 - 4. type ```scp /Users/user-name/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys```; Replace user-name, id_rsa.pub, and zz with your own username and path
 
-![ssh key](ssh-key.png)
+![ssh key](screenshots-lab1/ssh-key.png)
 After setting the ssh key, the user no longer needs to enter passcode to log in to remote server.
 
 ---
@@ -102,5 +102,5 @@ scp WhereAmI.java cs15lsp22alo@ieng6.ucsd.edu:~/; ssh cs15lsp22alo@ieng6.ucsd.ed
 ```
 
 And it will give me the following output:
-![optimize](optimize.png)
+![optimize](screenshots-lab1/optimize.png)
 By typing multiple commands in one line, it shortens the time to do certain things with less keystrokes.
