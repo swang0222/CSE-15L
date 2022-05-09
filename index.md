@@ -27,6 +27,8 @@ This is Sean Wang
 
 [Lab Report 2](https://swang0222.github.io/cse15l-lab-reports/lab-report-2-week-4.html)
 
+[Lab Report 3](https://swang0222.github.io/cse15l-lab-reports/lab-report-3-week-6.html)
+
 ---
 
 ## And here's a picture of my __WAIFU__
